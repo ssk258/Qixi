@@ -33,7 +33,7 @@ var Boy = function () {
     this.up2Bridge=function () {
         var dtd=$.Deferred();
         var tranx=0.11*$(document).width();
-        var trany=0.11*$(document).height();
+        var trany=$(".boy").offset().top-$(".girl").offset().top;
         $boy.transition({
                 transform: "translate(" + tranx + ",-" + trany + ") scale("+scales+","+scales+")"
             },2000,"linear",function () {
