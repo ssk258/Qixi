@@ -1,0 +1,228 @@
+.boy{
+    width: 151px;
+    height: 291px;
+    background: url(../img/boy.png) -0px -291px no-repeat;
+    position: absolute;
+    left: 6%;
+}
+
+.pauseWalk {
+    /**暂停动画**/
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+}
+
+/**男孩走动类**/
+.slowWalk {
+
+    -webkit-animation-name: person-slow;    /** 执行的帧动画 名称**/
+    -webkit-animation-duration: 1000ms;      /** 执行一次帧动画 时间**/
+    -webkit-animation-iteration-count: infinite;     /** 执行帧动画 次数(无线次)**/
+    /** person-slow动画执行一次分几步
+        start 第一帧是 上次动画结束帧
+        end  第一帧是 上次动画开始帧**/
+    -webkit-animation-timing-function: steps(1, start);
+
+    -moz-animation-name: person-slow;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start);
+    /*-webkit-animation: person-slow 1000ms infinite steps(1, start);*/
+    /*-moz-animation: person-slow 1000ms infinite steps(1, start);*/
+}
+/**拿花走动**/
+.slowFlolerWalk {
+    -webkit-animation: person-floler-slow 1000ms infinite steps(1, start);
+    -moz-animation: person-floler-slow 1000ms infinite steps(1, start);
+}
+/**女生**/
+.girl {
+    background: url(../img/girl.png) -151px -0px no-repeat;
+    position: absolute;
+    height: 291px;
+    width: 151px;
+    top:31.5%;
+    right:41%;
+    z-index: 13;
+}
+/**女孩转身**/
+.girlTurnBack {
+    -webkit-animation-name: girl-rotate;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: girl-rotate;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: step-start;
+    -moz-animation-fill-mode: forwards;
+}
+/**桥上暂停**/
+.boyOriginal {
+    background-position: -150px -0px;
+}
+
+/**男孩转身**/
+.boyTurnBack{
+    -webkit-animation: boyAction 1000ms 1 step-start forwards;
+    -moz-animation: boyAction 1000ms 1 step-start forwards;
+}
+
+/*关键帧动画for-webkit内核*/
+@-webkit-keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+
+}
+/*关键帧动画for-moz内核*/
+@-moz-keyframes person-slow {
+    0% {
+        background-position: -0px -291px;
+    }
+    25% {
+        background-position: -602px -0px;
+    }
+    50% {
+        background-position: -302px -291px;
+    }
+    75% {
+        background-position: -151px -291px;
+    }
+    100% {
+        background-position: -0px -291px;
+    }
+}
+
+
+@-webkit-keyframes person-floler-slow {
+     0% {
+         background-position: -453px -0px;
+     }
+     25% {
+         background-position: -904px -0px;
+     }
+     50% {
+         background-position: -451px -0px;
+     }
+     75% {
+         background-position: -753px -0px;
+     }
+     100% {
+         background-position: -300px -0px;
+     }
+ }
+
+@-moz-keyframes person-floler-slow {
+     0% {
+         background-position: -453px -0px;
+     }
+     25% {
+         background-position: -904px -0px;
+     }
+     50% {
+         background-position: -451px -0px;
+     }
+
+     75% {
+         background-position: -753px -0px;
+     }
+     100% {
+         background-position: -300px -0px;
+     }
+ }
+
+
+@-webkit-keyframes boyAction {
+    0% {
+        background-position: -603px -291px;
+    }
+    16.7% {
+        background-position: -150px -0px;
+    }
+    33.4% {
+        background-position: -453px -291px;
+    }
+    50.1% {
+        background-position: -0px -0px;
+    }
+    66.8% {
+        background-position: -903px -291px;
+    }
+    83.5% {
+        background-position: -753px -291px;
+    }
+    100% {
+        background-position: -603px -291px;
+    }
+}
+
+@-moz-keyframes boyAction {
+    0% {
+        /*background-position: -603px -291px;*/
+    }
+    16.7% {
+        background-position: -150px -0px;
+    }
+    33.4% {
+        background-position: -453px -291px;
+    }
+    50.1% {
+        background-position: -0px -0px;
+    }
+    66.8% {
+        background-position: -903px -291px;
+    }
+    83.5% {
+        background-position: -753px -291px;
+    }
+    100% {
+        background-position: -603px -291px;
+    }
+}
+
+@-webkit-keyframes girl-rotate {
+    8% {
+        background-position: -151px -0px;
+    }
+
+    50% {
+        background-position: -302px -0px;
+    }
+    75% {
+        background-position: -453px -0px;
+    }
+    100% {
+        background-position: -604px -0px;
+    }
+}
+
+@-moz-keyframes girl-rotate {
+
+    8% {
+        background-position: -151px -0px;
+    }
+
+    50% {
+        background-position: -302px -0px;
+    }
+    75% {
+        background-position: -453px -0px;
+    }
+    100% {
+        background-position: -604px -0px;
+    }
+}

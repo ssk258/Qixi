@@ -1,0 +1,96 @@
+
+
+/* 第二个背景图片*/
+.two_background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/QixiB-dark.png);
+    background-size: 100% 100%;
+}
+/**门框**/
+.door{
+    width: 12.6%;
+    height: 23.5%;
+    position: relative;
+    left: 52%;
+    top: 48%;
+    overflow: hidden;
+}
+/**门图片**/
+.door_left{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    float: left;
+    background-image: url(../img/door-left.png);
+    background-size: 100% 100%;
+}
+
+/**门图片**/
+.door_right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 0px;
+    float: left;
+    background-image: url(../img/door-right.png);
+    background-size: 100% 100%;
+}
+/**预加载图片**/
+.background_preload{
+    background: url(../img/QixiB-bright.png) no-repeat -9999px -9999px;
+}
+
+/**亮灯**/
+.lamp-bright{
+    background-image: url(../img/QixiB-bright.png);
+    background-size: 100% 100%;
+
+}
+
+.bird{
+    position: absolute;
+    width: 91px;
+    height: 71px;
+    top: 10%;
+    right: -10%;
+    z-index: 10;
+    /**背景图片 位置 是否重复**/
+    background: url(../img/bird.png) -182px 0px no-repeat;
+}
+/**鸟飞**/
+.birdFly {
+    -webkit-animation: birdFly 1000ms infinite steps(1,start);
+    -moz-animation: birdFly 1000ms infinite steps(1,start);
+}
+
+@-webkit-keyframes birdFly {
+    0% {
+        background-position: -182px 0px;
+    }
+    50%{
+        background-position: 0px 0px;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100%{
+        background-position: -182px 0px;
+    }
+}
+
+@-moz-keyframes birdFly {
+    0% {
+        background-position: -182px 0px;
+    }
+    50%{
+        background-position: 0px 0px;
+    }
+    75% {
+        background-position: -91px 0px;
+    }
+    100%{
+        background-position: -182px 0px;
+    }
+}

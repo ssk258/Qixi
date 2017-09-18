@@ -1,0 +1,168 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+/*主体部分*/
+#content {
+    width    : 100%;
+    height   : 100%;
+    overflow : hidden;
+    position : absolute;
+}
+
+.content-wrap {
+    width    : 100%;
+    height   : 100%;
+    position: relative;
+}
+.content-wrap > li {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+li:nth-child(2) {
+    background: #9BCD9B;
+}
+
+li:nth-child(3) {
+    background: yellow;
+}
+/* 第一个背景图片*/
+.one_background{
+    width: 100%;
+    height: 100%;
+}
+
+.one_top_bg{
+    width: 100%;
+    height: 71.6%;
+    background-image: url(../img/a_background_top.png);
+    background-size: 100% 100%;
+}
+
+
+.one_middle_bg{
+    width: 100%;
+    height: 13.1%;
+    background-image: url(../img/a_background_middle.png);
+    background-size: 100% 100%;
+}
+
+.one_bottom_bg{
+    width: 100%;
+    height: 15.3%;
+    background-image: url(../img/a_background_botton.png);
+    background-size: 100% 100%;
+}
+/**太阳**/
+.sun{
+    background: url(../img/sun.png) no-repeat;
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: 40%;
+    height: 201px;
+    width: 201px;
+}
+.rotation {
+    -webkit-animation: rotation 10000ms linear ;
+    /**动画结束停在最后**/
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation: rotation 10000ms linear ;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotation {
+     0% {
+         transform: translateX(0) translateY(0);
+     }
+    100% {
+        transform: translateX(-1000px) translateY(200px);
+    }
+ }
+@-moz-keyframes rotation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-1000px) translateY(200px);
+    }
+}
+
+.could1{
+    background: url(../img/cloud1.png);
+    z-index: 2;
+    position: absolute;
+    top:17%;
+    left: 0%;
+    height: 101px;
+    width: 181px;
+}
+.could1move{
+    -webkit-animation: could1anim 8000ms linear;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation: could1anim 8000ms linear;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes could1anim {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(400px);
+    }
+}
+@-moz-keyframes could1anim {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(400px);
+    }
+}
+
+.could2{
+    background: url(../img/cloud2.png);
+    z-index: 2;
+    position: absolute;
+    top:10%;
+    right: 0%;
+    height: 140px;
+    width: 301px;
+}
+
+.could2move{
+    -webkit-animation: could2anim 8000ms linear;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation: could1anim 8000ms linear;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes  could2anim{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-200px);
+    }
+}
+@-moz-keyframes  could2anim{
+0%{
+    transform: translateX(0px);
+}
+100%{
+    transform: translateX(-200px);
+}
+}
+
